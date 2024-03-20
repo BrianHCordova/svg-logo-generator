@@ -1,9 +1,8 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
-const shape = require("./shapes");
-const Circle = require("./Circle");
-const Triangle = require("./Triangle");
-const Square = require("./Square");
+const Circle = require("./lib/cirlcle");
+const Triangle = require("./lib/triangle");
+const Square = require("./lib/square");
 
 inquirer
 .prompt([
@@ -15,13 +14,13 @@ inquirer
     {
         type: "input",
         name: "textColor",
-        message: "Enter primary color:",
+        message: "Desired color for initials:",
     },
     {
         type: "list",
         name: "shape",
         message: "Choose your desired shape:",
-        choices: ["Circle", "Tirangle", "Square"]
+        choices: ["Circle", "Triangle", "Square"]
     },
     {
         type: "input",
@@ -35,11 +34,13 @@ inquirer
         myShape = new Circle(data.shape,data.textColor,data.shapeColor,data.text)
     }else if (data.shape==='Triangle'){
         myShape = new Triangle(data.shape,data.textColor,data.shapeColor,data.text)
-    }else if (data.shape==='Triangle'){
+    }else if (data.shape==='Square'){
         myShape = new Square(data.shape,data.textColor,data.shapeColor,data.text)
     }
     const svg = 
     `<svg width="200" height="250" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    ${myShape.render()}
+    ${myShape.renderText()}
     `
     fs.writeFile('testLogo.svg', svg,(err) => { 
         if (err) {
