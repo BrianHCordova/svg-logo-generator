@@ -9,23 +9,23 @@ inquirer
     {
         type: "input",
         name: "text",
-        message: "Type in your initials:",
+        message: "Type in your INITIALS:",
     },
     {
         type: "input",
         name: "textColor",
-        message: "Desired color for initials:",
+        message: "Choose your desired COLOR for initials:",
     },
     {
         type: "list",
         name: "shape",
-        message: "Choose your desired shape:",
+        message: "Choose your desired SHAPE:",
         choices: ["Circle", "Triangle", "Square"]
     },
     {
         type: "input",
         name: "shapeColor",
-        message: "Enter your shape color:",
+        message: "Enter your desired shape COLOR:",
     }
 ])
 .then((data) => { 
