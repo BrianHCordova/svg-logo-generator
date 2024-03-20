@@ -34,4 +34,8 @@ Feel free to contact me below with any questions or suggestions:
 
 - [Github](https://github.com/BrianHCordova)
 
+- [Repo](https://github.com/BrianHCordova/svg-logo-generator)
+
+- [YouTubeLink](https://youtu.be/cd8WYk1s6-c)
+
 - [Email Address](mailto:briancordova@yahoo.com)
